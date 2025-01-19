@@ -55,10 +55,19 @@
         MultiShift: MultiShift {
             compatible = "zmk,behavior-mod-morph";
             label = "MULTISHIFT";
-            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+            bindings = <&StickyShiftRelease LEFT_SHIFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        StickyShiftRelease: StickyShiftRelease {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKYSHIFTRELEASE";
+            bindings = <&sk>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <2000>;
         };
     };
 
