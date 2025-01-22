@@ -24,7 +24,7 @@
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <19 40>;
+            key-positions = <19 39>;
         };
     };
 
