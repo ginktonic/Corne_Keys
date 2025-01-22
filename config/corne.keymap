@@ -21,6 +21,11 @@
             bindings = <&tog 2>;
             key-positions = <41 40>;
         };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 40>;
+        };
     };
 
     behaviors {
