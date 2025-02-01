@@ -51,6 +51,11 @@
             bindings = <&kp LG(V)>;
             key-positions = <14 15>;
         };
+
+        EnterDouble {
+            bindings = <&kp ENTER>;
+            key-positions = <16 19>;
+        };
     };
 
     behaviors {
