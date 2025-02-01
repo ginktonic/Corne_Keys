@@ -31,6 +31,26 @@
             bindings = <&kp ENTER>;
             key-positions = <16 38>;
         };
+
+        CopyR {
+            bindings = <&kp RG(C)>;
+            key-positions = <19 20>;
+        };
+
+        PasteR {
+            bindings = <&kp RG(V)>;
+            key-positions = <21 20>;
+        };
+
+        CopyL {
+            bindings = <&kp LG(C)>;
+            key-positions = <15 16>;
+        };
+
+        PasteL {
+            bindings = <&kp LG(V)>;
+            key-positions = <14 15>;
+        };
     };
 
     behaviors {
