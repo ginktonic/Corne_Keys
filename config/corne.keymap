@@ -130,47 +130,6 @@
             require-prior-idle-ms = <500>;
             hold-trigger-on-release;
         };
-
-        NGNT_a: NGNT_a {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NGNT_A";
-            bindings = <&kp A>, <&ngnt_no>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        NGNT_ka: NGNT_ka {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NGNT_KA";
-            bindings = <&ngnt_ka>, <&ngnt_ma>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-
-    macros {
-        ngnt_no: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N &kp O>;
-            label = "NEW_MACRO";
-        };
-
-        ngnt_ma: ngnt_ma {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp M &kp A>;
-            label = "NGNT_MA";
-        };
-
-        ngnt_ka: ngnt_ka {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K &kp A>;
-            label = "NGNT_KA";
-        };
     };
 
     keymap {
@@ -187,7 +146,7 @@
             bindings = <
 &kp ESCAPE  &kp Q           &kp W              &kp F              &kp P                &kp B                  &kp J                    &kp L                 &kp U               &kp Y               &kp SEMICOLON   &kp C_PLAY_PAUSE
 &kp TAB     &HRM_L LCTRL A  &HRM_L LEFT_ALT R  &HRM_L LEFT_GUI S  &HRM_L LEFT_SHIFT T  &kp G                  &kp M                    &HRM_R RIGHT_SHIFT N  &HRM_R RIGHT_GUI E  &HRM_R RIGHT_ALT I  &HRM_R RCTRL O  &kp SQT
-&tog 5      &kp Z           &kp X              &kp C              &kp D                &kp V                  &kp K                    &kp H                 &kp COMMA           &kp DOT             &kp FSLH        &tog 3
+&tog 3      &kp Z           &kp X              &kp C              &kp D                &kp V                  &kp K                    &kp H                 &kp COMMA           &kp DOT             &kp FSLH        &mo 1
                                                &kp LG(Z)          &kp ENTER            &ThumbLayer 1 SPACE    &ThumbLayer 2 BACKSPACE  &MultiShift           &kp RG(RS(Z))
             >;
         };
@@ -224,18 +183,6 @@
             >;
         };
 
-        extra_1 {
-            display-name = "Naginata";
-            bindings = <
-&kp ESCAPE  &kp Q           &kp W              &kp F              &kp P      &kp LEFT                          &kp RIGHT                        &kp BACKSPACE  &kp U               &kp Y               &kp SEMICOLON   &kp C_PLAY_PAUSE
-&kp TAB     &HRM_L LCTRL A  &HRM_L LEFT_ALT R  &HRM_L LEFT_GUI S  &NGNT_ka   &kp G                             &kp M                            &NGNT_a        &HRM_R RIGHT_GUI E  &HRM_R RIGHT_ALT I  &HRM_R RCTRL O  &kp SQT
-&mo 2       &kp Z           &kp X              &kp C              &kp D      &kp V                             &kp K                            &kp H          &kp COMMA           &kp DOT             &kp FSLH        &tog 3
-                                               &kp LG(Z)          &kp ENTER  &OyayubiShift LEFT_SHIFT SPACE    &OyayubiShift RIGHT_SHIFT SPACE  &MultiShift    &kp RG(RS(Z))
-            >;
-        };
-
-        extra_2 { status = "reserved"; };
-
         Gaming {
             display-name = "Gaming";
             bindings = <
@@ -245,5 +192,7 @@
                                        &kp LGUI  &trans    &kp SPACE            &kp RET    &trans        &kp RALT
             >;
         };
+
+        extra_2 { status = "reserved"; };
     };
 };
