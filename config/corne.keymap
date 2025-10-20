@@ -212,10 +212,10 @@
 
         Drawing {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp C          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp X
-&trans  &trans  &trans  &trans  &trans  &trans    &Brush_Eraser  &kp LG(PLUS)          &kp LG(MINUS)          &kp S                 &kp V                  &kp LG(B)
-&trans  &trans  &trans  &trans  &trans  &trans    &kp L          &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LG(NUMBER_0)      &kp LG(SEMICOLON)      &kp LG(U)
-                        &trans  &trans  &trans    &kp LG(Z)      &kp LG(LS(Z))         &kp SPACE
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp X
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LALT   &kp B                 &kp E                  &kp S                 &kp V                  &kp LG(B)
+&trans  &trans  &trans  &trans  &trans  &trans    &kp L      &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LG(NUMBER_0)      &kp LG(SEMICOLON)      &kp LG(U)
+                        &trans  &trans  &trans    &kp LG(Z)  &kp LG(LS(Z))         &kp SPACE
             >;
         };
     };
