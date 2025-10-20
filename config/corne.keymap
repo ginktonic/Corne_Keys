@@ -63,7 +63,7 @@
         };
 
         ToggleDrawing {
-            bindings = <&none>;
+            bindings = <&tog 4>;
             key-positions = <39 40 41>;
         };
     };
