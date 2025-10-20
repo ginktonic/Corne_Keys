@@ -59,7 +59,12 @@
 
         ToggleGaming {
             bindings = <&tog 3>;
-            key-positions = <40 41 39>;
+            key-positions = <36 37 38>;
+        };
+
+        ToggleDrawing {
+            bindings = <&none>;
+            key-positions = <39 40 41>;
         };
     };
 
@@ -135,6 +140,13 @@
             require-prior-idle-ms = <500>;
             hold-trigger-on-release;
         };
+
+        Brush_Eraser: Brush_Eraser {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRUSH_ERASER";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp B>;
+        };
     };
 
     keymap {
@@ -198,6 +210,13 @@
             >;
         };
 
-        extra_2 { status = "reserved"; };
+        Drawing {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp X
+&trans  &trans  &trans  &trans  &trans  &trans    &Brush_Eraser  &kp LG(PLUS)          &kp LG(MINUS)          &kp S                 &kp V                  &kp LG(B)
+&trans  &trans  &trans  &trans  &trans  &trans    &kp L          &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LG(NUMBER_0)      &kp LG(SEMICOLON)      &kp LG(U)
+                        &trans  &trans  &trans    &kp LG(Z)      &kp LG(LS(Z))         &kp SPACE
+            >;
+        };
     };
 };
